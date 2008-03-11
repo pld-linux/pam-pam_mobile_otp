@@ -1,0 +1,12 @@
+diff -urN pam_mobile_otp.orig/Makefile.Linux pam_mobile_otp/Makefile.Linux
+--- pam_mobile_otp.orig/Makefile.Linux	2007-02-10 17:24:42.000000000 +0100
++++ pam_mobile_otp/Makefile.Linux	2008-03-11 13:49:43.000000000 +0100
+@@ -12,7 +12,7 @@
+ 	gcc -c md5.c
+ 
+ install	: pam_mobile_otp.so
+-	cp pam_mobile_otp.so /lib/security/pam_mobile_otp.so
++	cp pam_mobile_otp.so $(DESTDIR)/lib/security/pam_mobile_otp.so
+ 
+ clean	: 
+ 	rm *.o *.so
