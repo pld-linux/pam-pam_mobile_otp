@@ -6,7 +6,7 @@ Version:	0.2
 Release:	0.1
 License:	waiting for reply from author
 Group:		Applications
-Source0:	%{modulename}-%{version}.tgz
+Source0:	http://motp.sourceforge.net/%{modulename}-%{version}.tgz
 # Source0-md5:	ce8fa3a59c0ee0ed0deef3a3092ffb03
 URL:		http://motp.sourceforge.net/
 BuildRequires:	pam-devel
