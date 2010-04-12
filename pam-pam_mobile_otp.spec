@@ -2,12 +2,12 @@
 Summary:	Mobile-OTP PAM module
 Summary(pl.UTF-8):	Moduł PAM Mobile-OTP
 Name:		pam-%{modulename}
-Version:	0.3
+Version:	0.5
 Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://motp.sourceforge.net/%{modulename}-%{version}.tgz
-# Source0-md5:	4cbf3c154cefa2a42dc54a2569567c82
+# Source0-md5:	e5ac73fafb3665b48795923e4135e610
 URL:		http://motp.sourceforge.net/
 BuildRequires:	pam-devel
 Patch0:		%{modulename}-DESTDIR.patch
@@ -22,8 +22,6 @@ mobile phones.
 %patch0 -p1
 
 %build
-
-cp Makefile.Linux Makefile
 %{__make}
 
 %install
