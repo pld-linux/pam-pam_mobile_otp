@@ -1,16 +1,16 @@
-%define         modulename pam_mobile_otp
+%define		modulename pam_mobile_otp
 Summary:	Mobile-OTP PAM module
 Summary(pl.UTF-8):	Moduł PAM Mobile-OTP
 Name:		pam-%{modulename}
-Version:	0.5
+Version:	0.6.1
 Release:	0.1
 License:	GPL
 Group:		Applications
 Source0:	http://motp.sourceforge.net/%{modulename}-%{version}.tgz
-# Source0-md5:	e5ac73fafb3665b48795923e4135e610
+# Source0-md5:	28a2239d5b7afdec8437c4cbca4b7417
+Patch0:		%{modulename}-DESTDIR.patch
 URL:		http://motp.sourceforge.net/
 BuildRequires:	pam-devel
-Patch0:		%{modulename}-DESTDIR.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -26,14 +26,13 @@ mobile phones.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-# create directories if necessary
+
 install -d $RPM_BUILD_ROOT{/lib/security/,/etc/security,/var/cache/motp}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install motp.conf $RPM_BUILD_ROOT/etc/security
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
