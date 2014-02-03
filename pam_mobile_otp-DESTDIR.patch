@@ -1,4 +1,3 @@
-diff -urN pam_mobile_otp.orig/Makefile pam_mobile_otp/Makefile
 --- pam_mobile_otp.orig/Makefile	2007-02-10 17:24:42.000000000 +0100
 +++ pam_mobile_otp/Makefile	2008-03-11 13:49:43.000000000 +0100
 @@ -12,7 +12,7 @@
@@ -6,7 +5,7 @@ diff -urN pam_mobile_otp.orig/Makefile pam_mobile_otp/Makefile
  
  install	: pam_mobile_otp.so
 -	cp pam_mobile_otp.so /lib/security/pam_mobile_otp.so
-+	cp pam_mobile_otp.so $(DESTDIR)/lib/security/pam_mobile_otp.so
++	cp pam_mobile_otp.so $(DESTDIR)/$(LIB)/security/pam_mobile_otp.so
  
  clean	: 
  	rm *.o *.so
